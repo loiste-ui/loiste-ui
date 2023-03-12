@@ -1,4 +1,4 @@
 // styles
 import "./styles.css";
 
-export * from "./components/Button";
+export * from "./components/Button/Button";
