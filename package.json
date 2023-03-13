@@ -10,7 +10,8 @@
     "format": "prettier --write \"**/*.{ts,tsx,md,mdx}\"",
     "prepare": "husky install",
     "storybook:dev": "turbo run storybook:dev",
-    "storybook:build": "turbo run storybook:build"
+    "storybook:build": "turbo run storybook:build",
+    "storybook:test": "turbo run storybook:test"
   },
   "devDependencies": {
     "@changesets/cli": "^2.26.0",
