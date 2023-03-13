@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { Button, useExample } from '@loiste-ui/react'
+import { Button, Text, useExample } from '@loiste-ui/react'
 
 export default function Home() {
   const { message } = useExample()
@@ -19,7 +19,7 @@ export default function Home() {
         </h1>
         <div className="mx-auto mt-5 max-w-xl sm:flex sm:justify-center md:mt-8">
           <Button>LOL</Button>
-          {message}
+          <Text size="9xl">{message}</Text>
         </div>
       </main>
     </div>

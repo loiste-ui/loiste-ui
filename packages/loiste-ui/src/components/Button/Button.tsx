@@ -7,7 +7,6 @@ const button = cva('rounded-md relative', {
     variant: {
       default: 'bg-white text-text shadow-button border border-gray-400',
       primary: 'bg-primary text-white',
-      monochrome: 'bg-white text-text border border-gray-400',
     },
     size: {
       slim: 'text-sm',
