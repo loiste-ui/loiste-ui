@@ -13,7 +13,7 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "check-types": "tsc --noEmit",
+    "lint": "tsc --noEmit",
     "storybook:dev": "storybook dev -p 6006",
     "storybook:build": "storybook build"
   },
@@ -27,6 +27,7 @@
     "@storybook/addon-essentials": "7.0.0-rc.2",
     "@storybook/addon-interactions": "7.0.0-rc.2",
     "@storybook/addon-links": "7.0.0-rc.2",
+    "@storybook/addon-postcss": "^2.0.0",
     "@storybook/blocks": "7.0.0-rc.2",
     "@storybook/react": "7.0.0-rc.2",
     "@storybook/react-webpack5": "7.0.0-rc.2",
@@ -35,7 +36,6 @@
     "eslint": "^7.32.0",
     "eslint-config-custom": "workspace:*",
     "eslint-plugin-storybook": "^0.6.11",
-    "postcss": "^8.4.20",
     "prop-types": "15.8.1",
     "react": "^18.2.0",
     "react-dom": "18.2.0",
