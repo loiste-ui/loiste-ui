@@ -73,6 +73,8 @@ importers:
       '@storybook/react-webpack5': 7.0.0-rc.2
       '@storybook/testing-library': 0.0.14-next.1
       '@types/react': ^18.0.26
+      class-variance-authority: ^0.4.0
+      classnames: ^2.3.2
       eslint: ^7.32.0
       eslint-config-custom: workspace:*
       eslint-plugin-storybook: ^0.6.11
@@ -97,6 +99,8 @@ importers:
       '@storybook/react-webpack5': 7.0.0-rc.2_w7q2hgf3yzadnwd7h5vt5inpkm
       '@storybook/testing-library': 0.0.14-next.1
       '@types/react': 18.0.28
+      class-variance-authority: 0.4.0_typescript@4.9.5
+      classnames: 2.3.2
       eslint: 7.32.0
       eslint-config-custom: link:../eslint-config-custom
       eslint-plugin-storybook: 0.6.11_jofidmxrjzhj7l6vknpw5ecvfe
@@ -4854,6 +4858,21 @@ packages:
   /ci-info/3.8.0:
     resolution: {integrity: sha512-eXTggHWSooYhq49F2opQhuHWgzucfF2YgODK4e1566GQs5BIfP30B0oenwBJHfWxAs2fyPB1s7Mg949zLf61Yw==}
     engines: {node: '>=8'}
+    dev: true
+
+  /class-variance-authority/0.4.0_typescript@4.9.5:
+    resolution: {integrity: sha512-74enNN8O9ZNieycac/y8FxqgyzZhZbxmCitAtAeUrLPlxjSd5zA7LfpprmxEcOmQBnaGs5hYhiSGnJ0mqrtBLQ==}
+    peerDependencies:
+      typescript: '>= 4.5.5 < 5'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+    dependencies:
+      typescript: 4.9.5
+    dev: true
+
+  /classnames/2.3.2:
+    resolution: {integrity: sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==}
     dev: true
 
   /clean-css/5.3.2:
