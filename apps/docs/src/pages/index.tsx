@@ -1,7 +1,9 @@
-import Head from "next/head";
-import { Button } from "@loiste-ui/react";
+import Head from 'next/head'
+import { Button, useExample } from '@loiste-ui/react'
 
 export default function Home() {
+  const { message } = useExample()
+
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2">
       <Head>
@@ -17,8 +19,9 @@ export default function Home() {
         </h1>
         <div className="mx-auto mt-5 max-w-xl sm:flex sm:justify-center md:mt-8">
           <Button />
+          {message}
         </div>
       </main>
     </div>
-  );
+  )
 }
