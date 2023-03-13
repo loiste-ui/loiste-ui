@@ -1,5 +1,11 @@
 # tailwind-config
 
+## 0.1.0
+
+### Minor Changes
+
+- Storybook and tailwind
+
 ## 0.0.2
 
 ### Patch Changes

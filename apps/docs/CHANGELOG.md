@@ -1,5 +1,12 @@
 # docs
 
+## 0.0.3
+
+### Patch Changes
+
+- Updated dependencies
+  - @loiste-ui/react@0.1.0
+
 ## 0.0.2
 
 ### Patch Changes
