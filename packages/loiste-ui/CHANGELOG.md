@@ -1,5 +1,11 @@
 # @loiste-ui/react
 
+## 0.1.1
+
+### Patch Changes
+
+- Heading component
+
 ## 0.1.0
 
 ### Minor Changes
