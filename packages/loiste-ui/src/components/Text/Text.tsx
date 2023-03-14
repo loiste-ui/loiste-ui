@@ -1,5 +1,6 @@
 import { cva, VariantProps } from 'class-variance-authority'
 import classNames from 'classnames'
+import React from 'react'
 
 const textSchema = cva('', {
   variants: {
@@ -36,17 +37,18 @@ export interface TextProps
   children: React.ReactNode
 }
 
-export const Text = ({
-  children,
-  variant,
-  size,
-  className,
-  ...props
-}: TextProps) => {
-  console.log(className)
-  return (
-    <p className={textSchema({ variant, size, className })} {...props}>
-      {children}
-    </p>
-  )
-}
+export const Text = React.forwardRef<HTMLParagraphElement, TextProps>(
+  ({ children, variant, size, className, ...props }, ref) => {
+    return (
+      <p
+        ref={ref}
+        className={textSchema({ variant, size, className })}
+        {...props}
+      >
+        {children}
+      </p>
+    )
+  }
+)
+
+Text.displayName = 'Text'

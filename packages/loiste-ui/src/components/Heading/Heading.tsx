@@ -1,5 +1,6 @@
 import { cva, VariantProps } from 'class-variance-authority'
 import classNames from 'classnames'
+import React from 'react'
 
 const headingSchema = cva('', {
   variants: {
@@ -22,11 +23,23 @@ const headingSchema = cva('', {
       '8xl': 'text-8xl',
       '9xl': 'text-9xl',
     },
+    weight: {
+      thin: 'font-thin',
+      extralight: 'font-extralight',
+      light: 'font-light',
+      normal: 'font-normal',
+      medium: 'font-medium',
+      semibold: 'font-semibold',
+      bold: 'font-bold',
+      extrabold: 'font-extrabold',
+      black: 'font-black',
+    },
   },
   compoundVariants: [],
   defaultVariants: {
     variant: 'default',
     size: 'sm',
+    weight: 'normal',
   },
 })
 
@@ -37,18 +50,19 @@ export interface HeadingProps
   as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 }
 
-export const Heading = ({
-  children,
-  variant,
-  size,
-  as = 'h2',
-  className,
-  ...props
-}: HeadingProps) => {
-  const Tag = as
-  return (
-    <Tag className={headingSchema({ variant, size, className })} {...props}>
-      {children}
-    </Tag>
-  )
-}
+export const Heading = React.forwardRef<HTMLHeadingElement, HeadingProps>(
+  ({ children, variant, size, as = 'h2', className, ...props }, ref) => {
+    const Tag = as
+    return (
+      <Tag
+        ref={ref}
+        className={headingSchema({ variant, size, className })}
+        {...props}
+      >
+        {children}
+      </Tag>
+    )
+  }
+)
+
+Heading.displayName = 'Heading'
