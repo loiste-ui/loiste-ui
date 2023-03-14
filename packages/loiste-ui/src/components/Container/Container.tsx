@@ -1,10 +1,11 @@
 import { cva, VariantProps } from 'class-variance-authority'
 import React from 'react'
+import classNames from 'classnames'
 
-const containerSchema = cva('flex', {
+const containerSchema = cva('flex flex-col', {
   variants: {
     type: {
-      container: 'mx-auto flex-col',
+      container: 'mx-auto max-w-7xl md:w-8/12 xl:w-10/12 p-2 md:p-4',
       fluid: '',
     },
   },
@@ -21,7 +22,7 @@ export interface ContainerProps
 }
 
 export const Container = React.forwardRef<HTMLDivElement, ContainerProps>(
-  ({ children, type, ...props }, ref) => {
+  ({ children, type, className, ...props }, ref) => {
     return (
       <div ref={ref} className={containerSchema({ type })} {...props}>
         {children}

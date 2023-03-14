@@ -18,7 +18,7 @@ export interface BoxProps
   extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof boxSchema> {
   children: React.ReactNode
-  as: 'div' | 'span'
+  as?: 'div' | 'span'
 }
 
 type ElementType = HTMLDivElement | HTMLSpanElement

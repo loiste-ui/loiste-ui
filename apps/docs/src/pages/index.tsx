@@ -1,5 +1,13 @@
 import Head from 'next/head'
-import { Button, Text, Heading, Flex, Box, useExample } from '@loiste-ui/react'
+import {
+  Button,
+  Text,
+  Heading,
+  Flex,
+  Box,
+  Container,
+  useExample,
+} from '@loiste-ui/react'
 
 export default function Home() {
   const { message } = useExample()
@@ -11,20 +19,18 @@ export default function Home() {
       </Head>
 
       <main>
-        <Flex direction="column">
-          <Heading weight="bold" size="4xl">
-            Docs
-          </Heading>
-
-          <Box as="span">Turborepo Example</Box>
+        <Container>
+          <Flex className="items-center">
+            <Heading weight="bold" size="4xl">
+              Docs
+            </Heading>
+            <Box as="span">Turborepo Example</Box>
+          </Flex>
           <Flex direction="column">
             <Button>LOL</Button>
-            <Text size="2xl">{message}</Text>
-            <Text>LOL</Text>
-            <Heading>LOL</Heading>
-            <Heading as="h4">LOL</Heading>
+            <Text size="4xl">{message}</Text>
           </Flex>
-        </Flex>
+        </Container>
       </main>
     </>
   )
