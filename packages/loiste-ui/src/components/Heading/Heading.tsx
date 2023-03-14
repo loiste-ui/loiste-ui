@@ -1,7 +1,7 @@
 import { cva, VariantProps } from 'class-variance-authority'
 import classNames from 'classnames'
 
-const textSchema = cva('', {
+const headingSchema = cva('', {
   variants: {
     variant: {
       default: '',
@@ -30,23 +30,25 @@ const textSchema = cva('', {
   },
 })
 
-export interface TextProps
-  extends React.HTMLAttributes<HTMLParagraphElement>,
-    VariantProps<typeof textSchema> {
+export interface HeadingProps
+  extends React.HTMLAttributes<HTMLHeadingElement>,
+    VariantProps<typeof headingSchema> {
   children: React.ReactNode
+  as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 }
 
-export const Text = ({
+export const Heading = ({
   children,
   variant,
   size,
+  as = 'h2',
   className,
   ...props
-}: TextProps) => {
-  console.log(className)
+}: HeadingProps) => {
+  const Tag = as
   return (
-    <p className={textSchema({ variant, size, className })} {...props}>
+    <Tag className={headingSchema({ variant, size, className })} {...props}>
       {children}
-    </p>
+    </Tag>
   )
 }

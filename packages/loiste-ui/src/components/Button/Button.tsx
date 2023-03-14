@@ -2,7 +2,7 @@ import { cva, VariantProps } from 'class-variance-authority'
 import classNames from 'classnames'
 import { ButtonHTMLAttributes } from 'react'
 
-const button = cva('rounded-md relative', {
+const buttonSchema = cva('rounded-md relative', {
   variants: {
     variant: {
       default: 'bg-white text-text shadow-button border border-gray-400',
@@ -25,7 +25,6 @@ const button = cva('rounded-md relative', {
       variant: 'primary',
       className: 'text-primary',
     },
-
     {
       size: 'slim',
       className: 'px-3 py-[3px]',
@@ -54,7 +53,7 @@ const button = cva('rounded-md relative', {
 
 export interface ButtonProps
   extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'disabled'>,
-    VariantProps<typeof button> {
+    VariantProps<typeof buttonSchema> {
   children: React.ReactNode
   loading?: boolean
 }
@@ -68,7 +67,7 @@ export const Button = ({
   loading = false,
 }: ButtonProps) => {
   return (
-    <button className={button({ variant, size, fullWidth, disabled })}>
+    <button className={buttonSchema({ variant, size, fullWidth, disabled })}>
       <span
         className={classNames(
           'leading-[1.25rem]',

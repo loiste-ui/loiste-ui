@@ -1,25 +1,26 @@
 import Head from 'next/head'
-import { Button, Text, useExample } from '@loiste-ui/react'
+import { Button, Text, Heading, useExample } from '@loiste-ui/react'
 
 export default function Home() {
   const { message } = useExample()
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
+    <div>
       <Head>
         <title>Docs - Turborepo Example</title>
       </Head>
 
-      <main className="mx-auto w-auto px-4 pt-16 pb-8 sm:pt-24 lg:px-8">
-        <h1 className="mx-auto text-center text-6xl font-extrabold tracking-tight text-white sm:text-7xl lg:text-8xl xl:text-8xl">
+      <main>
+        <h1>
           Docs
-          <span className="from-brandred to-brandblue block bg-gradient-to-r bg-clip-text px-2 text-transparent">
-            Turborepo Example
-          </span>
+          <span>Turborepo Example</span>
         </h1>
-        <div className="mx-auto mt-5 max-w-xl sm:flex sm:justify-center md:mt-8">
+        <div>
           <Button>LOL</Button>
-          <Text size="9xl">{message}</Text>
+          <Text size="2xl">{message}</Text>
+          <Text>LOL</Text>
+          <Heading>LOL</Heading>
+          <Heading as="h4">LOL</Heading>
         </div>
       </main>
     </div>
